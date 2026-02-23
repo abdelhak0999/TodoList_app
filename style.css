@@ -1,0 +1,105 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #121212; /* Fond sombre */
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.app-container {
+    background: #1e1e1e; /* Gris anthracite */
+    padding: 25px;
+    width: 380px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+h1 { text-align: center; color: #bb86fc; }
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Permet de ne pas déborder */
+    align-items: stretch;
+}
+
+input[type="text"] {
+    flex: 2; /* Prend plus de place que la date */
+    min-width: 150px;
+    padding: 12px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background: #2c2c2c;
+    color: white;
+}
+
+input[type="date"] {
+    flex: 1;
+    min-width: 130px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    background: #2c2c2c;
+    color: white;
+    font-family: inherit;
+}
+
+#addBtn {
+    background-color: #bb86fc;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+/* Fix pour la liste de tâches qui est écrasée à droite */
+#taskList {
+    padding: 0;
+    width: 100%; /* S'assure que la liste prend toute la largeur */
+}
+
+li {
+    background: #2c2c2c;
+    margin-bottom: 10px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 8px;
+}
+.completed span {
+    text-decoration: line-through;
+    color: #757575;
+}
+
+.delete-btn {
+    background: transparent;
+    border: none;
+    color: #cf6679;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.delete-btn:hover { color: #ff4d4d; }
+/* Style pour la date affichée dans la tâche */
+.task-date {
+    font-size: 0.8rem;
+    color: #bb86fc;
+    margin-left: 10px;
+    font-style: italic;
+}
+
+/* Classe si la tâche est en retard */
+.overdue {
+    border: 1px solid #ff4d4d;
+    box-shadow: 0 0 5px rgba(255, 77, 77, 0.3);
+}
+
+.overdue .task-date {
+    color: #ff4d4d;
+    font-weight: bold;
+}
